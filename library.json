@@ -1,0 +1,20 @@
+{
+	"name": "slippy",
+	"version": "0.1.0",
+	"_comment": "^ also update meson.build",
+	"description": "SLIP (RFC 1055) framing as a C library",
+	"keywords": ["messaging", "communication", "framing"],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/playfulkittykat/u6502.git"
+	},
+	"authors": [
+		{
+			"name": "Playful KittyKat",
+			"maintainer": true
+		}
+	],
+	"license": "AGPL-3.0-or-later",
+	"frameworks": "*",
+	"platforms": "*"
+}
