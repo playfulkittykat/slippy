@@ -22,6 +22,10 @@ jobs:
           python-version: '3.x'
       - name: Install dependencies
         run: python -m pip install meson==1.9.1 ninja
+      - name: Install test dependencies
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install --yes --force-yes libcriterion-dev
       - name: Configure Project
         run: meson setup builddir/ -Dwerror=true
         env:
@@ -37,3 +41,7 @@ jobs:
           ninja -C builddir/ clang-tidy
       - name: Build
         run: meson compile -C builddir/ -v
+      - name: Test
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          meson test -C builddir/ -v
