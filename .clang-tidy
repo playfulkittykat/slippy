@@ -14,6 +14,8 @@ Checks: >
   -readability-else-after-return,
   -readability-function-size,
   -readability-function-cognitive-complexity
+WarningsAsErrors: >
+  *
 CheckOptions:
   misc-include-cleaner.IgnoreHeaders: 'criterion/.*'
 ---
