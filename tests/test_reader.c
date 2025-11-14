@@ -19,7 +19,6 @@
 #include <criterion/criterion.h>
 #include <criterion/parameterized.h>
 #include <stdint.h>
-#include <stdio.h>
 
 // NOLINTBEGIN(readability-magic-numbers)
 
